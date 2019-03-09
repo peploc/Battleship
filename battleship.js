@@ -1,16 +1,17 @@
 // A simple JavaScript Battleship Game
+// 
 // Usage: run startNewGame with 3 arguments:
-// Side of the board length (from 2 to 10)
-// Number of turns
-// Number of ships
-// Ships are 1X1
+// - Length of the board's side (from 2 to 10)
+// - Number of turns
+// - Number of ships (ships are 1X1)
+//
 // Enjoy :)
 // Written by Giuseppe Locanto
 
 function startNewGame(dimensions, turn, ship)
 {
   var result = 0;
-  var board = [[], [], [], [], [], [], [], [], [], []];
+  var board = [];
 
 if(dimensions > 10 || dimensions < 2)
 {
@@ -24,8 +25,10 @@ else
 {
   for(var a = 0; a < dimensions; a++)
   {
+    board.push([]);
     for(var s = 0; s < dimensions; s++)
     {
+      board[a].push([]);
       board[a][s] = null;
     }
   }
@@ -88,4 +91,4 @@ else
 }
 }
 
-startNewGame(0, 1000, 20); //test here 
+startNewGame(3, 10, 2); //test here 
