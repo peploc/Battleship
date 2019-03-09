@@ -55,11 +55,16 @@ else
 
     if(board[m][n] === "s")
     {
-      board[m][n] = null;
+      board[m][n] = "x";
       console.log("Hit & Sunk at: " + m + " " + n);
+    }
+    else if(board[m][n] === "x")  //precision loop
+    {
+      l--;
     }
     else
     {
+      board[m][n] = "x";
       console.log("Hole in the water at: " + m + " " + n);
     }
   }
@@ -91,4 +96,4 @@ else
 }
 }
 
-startNewGame(3, 10, 2); //test here 
+startNewGame(10, 100, 10); //test here 
